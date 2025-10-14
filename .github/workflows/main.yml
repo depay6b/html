@@ -1,12 +1,18 @@
 name: Purge jsDelivr cache
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]     # 每次 push 到 main 都会触发一次
 jobs:
   purge:
     runs-on: ubuntu-latest
     steps:
       - uses: gacts/purge-jsdelivr-cache@v1
         with:
-          urls: |
+          # 多个文件：一行一个
+          url: |
             https://cdn.jsdelivr.net/gh/depay6b/html@main/js/qd/wenti/widget-styles.css
+            https://cdn.jsdelivr.net/gh/depay6b/html@main/js/qd/wenti/intro.js
+            https://cdn.jsdelivr.net/gh/depay6b/html@main/js/qd/wenti/widget-script.js
+            https://cdn.jsdelivr.net/gh/depay6b/html@main/js/qd/wenti/faq-data.js
+          # 可选，失败重试次数
+          attempts: 2
