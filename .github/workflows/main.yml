@@ -1,0 +1,12 @@
+name: Purge jsDelivr cache
+on:
+  push:
+    branches: [ main ]
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          urls: |
+            https://cdn.jsdelivr.net/gh/depay6b/html@main/js/qd/wenti/widget-styles.css
