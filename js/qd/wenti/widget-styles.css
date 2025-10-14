@@ -377,6 +377,61 @@ body {
     flex-shrink: 0;
 }
 
+/* 帮助按钮包装器 - 用于定位关闭按钮 */
+.cs-help-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* 帮助按钮关闭按钮 - 圆形图标样式 */
+.cs-help-btn-close {
+    display: none; /* 桌面端默认隐藏 */
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    z-index: 10;
+    /* 防止尺寸变化 */
+    animation: none !important;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-help-btn-close svg {
+    width: 14px;
+    height: 14px;
+    color: #667eea;
+    transition: color 0.2s ease;
+}
+
+.cs-help-btn-close:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05) !important;
+}
+
+.cs-help-btn-close:hover svg {
+    color: #5568d3;
+}
+
+.cs-help-btn-close:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* 介绍按钮样式 */
 .cs-intro-btn {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -910,6 +965,20 @@ body {
         height: 18px;
     }
 
+    /* 移动端显示关闭按钮 - 圆形图标 */
+    .cs-help-btn-close {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        width: 24px !important;
+        height: 24px !important;
+        transform: none !important;
+        animation: none !important;
+        min-width: unset !important;
+        min-height: unset !important;
+    }
+
     /* 平板端介绍按钮 */
     .cs-intro-btn {
         padding: 8px 14px;
@@ -1026,6 +1095,23 @@ body {
     .cs-help-btn svg {
         width: 16px;
         height: 16px;
+    }
+
+    /* 移动端关闭按钮 - 圆形图标 */
+    .cs-help-btn-close {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        width: 22px !important;
+        height: 22px !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .cs-help-btn-close svg {
+        width: 12px !important;
+        height: 12px !important;
     }
 
     /* 移动端介绍按钮 */
