@@ -894,7 +894,7 @@ body {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .cs-widget {
-        bottom: max(16px, env(safe-area-inset-bottom));
+        bottom: max(80px, env(safe-area-inset-bottom));
         right: 16px;
     }
 
@@ -1012,7 +1012,7 @@ body {
 
 @media (max-width: 480px) {
     .cs-widget {
-        bottom: max(12px, env(safe-area-inset-bottom));
+        bottom: max(80px, env(safe-area-inset-bottom));
         right: 12px;
     }
 
@@ -3443,6 +3443,7 @@ body {
     outline: 3px solid #4f46e5;
     outline-offset: 2px;
 }
+
 
 
 
